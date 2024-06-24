@@ -1,0 +1,1022 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asif Bhuiyan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Montserrat&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .hr {
+            border: dotted 6px white;
+            border-bottom: none;
+            margin: 20 auto;
+            width: 70px;
+
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 10px;
+        }
+
+        /* for mobile */
+        [class*="col-"] {
+            width: 100%;
+        }
+
+        .navbar {
+            background-color: #40868b;
+            padding: 0% 5%;
+            text-align: center;
+        }
+
+        .menu {
+            display: flex;
+            flex-direction: column;
+            text-transform: uppercase;
+        }
+
+        .menu a {
+            background-color: #0c6168;
+            border-radius: 10px;
+            margin: 7px 0px;
+            padding: 10px;
+        }
+
+        .menu a:hover {
+            background-color: gray;
+        }
+
+        .navbar::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .profile {
+            text-align: center;
+            background-color: rgb(231, 222, 231);
+        }
+
+        .profile-description h1 {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 3rem;
+        }
+
+        .profile-description p {
+            color: gray;
+            margin: 0 auto 20px auto;
+            text-align: center;
+            width: 90%;
+
+        }
+
+        .profile-description::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .professional-experience {
+            padding: 1% 0%;
+        }
+
+        .professional-experience .card {
+            background-color: #a39e9e;
+            border-radius: 5px;
+            padding-bottom: 20px;
+            transition: 0.3s;
+            height: 700px;
+        }
+
+        .link:hover {
+            background-color: #0069d9;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px 5px black;
+        }
+
+        .card-icon {
+            text-align: center;
+        }
+
+        .card-icon img {
+            margin-top: 20px;
+            width: 100px;
+        }
+
+        .rounded-img {
+            border: 5px solid white;
+            border-radius: 50%;
+            padding: 15px;
+        }
+
+        .card-title h2 {
+            background-color: #616161;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .skills-container {
+            padding-right: 45px;
+        }
+
+        .skills-container li {
+            font-weight: bolder;
+            list-style: none;
+            margin: 30px 10px;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        .skills-container li::before {
+            content: '';
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background-color: rgb(86, 86, 153, .5);
+            border-radius: 1000px;
+        }
+
+        .skills-container li::after {
+            content: '';
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            width: 0;
+            height: 10px;
+            background-color: rgb(86, 86, 153, 1);
+            border-radius: 1000px;
+            animation-duration: 3s;
+            animation-delay: 2s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            /* animation-direction: alternate; */
+            animation-iteration-count: 3;
+        }
+
+        .skills-container li.html::after {
+            animation-name: html;
+        }
+
+        @keyframes html {
+            to {
+                width: 90%;
+                /* background-color: orange; */
+            }
+        }
+
+        .skills-container li.css::after {
+            animation-name: css;
+        }
+
+        @keyframes css {
+            to {
+                width: 85%;
+            }
+        }
+
+        .skills-container li.bootstrap::after {
+            animation-name: bootstrap;
+        }
+
+        @keyframes bootstrap {
+            to {
+                width: 85%;
+            }
+        }
+
+        .skills-container li.js::after {
+            animation-name: js;
+        }
+
+        @keyframes js {
+            to {
+                width: 85%;
+            }
+        }
+
+        .skills-container li.php::after {
+            animation-name: php;
+        }
+
+        @keyframes php {
+            to {
+                width: 80%;
+            }
+        }
+
+        .skills-container li.python::after {
+            animation-name: python;
+        }
+
+        @keyframes python {
+            to {
+                width: 75%;
+            }
+        }
+
+        .skills-container li.sql::after {
+            animation-name: sql;
+        }
+
+        @keyframes sql {
+            to {
+                width: 80%;
+            }
+        }
+
+        .skills-container li.git::after {
+            animation-name: github;
+        }
+
+        @keyframes github {
+            to {
+                width: 90%;
+            }
+        }
+
+        .skills-container li.latex::after {
+            animation-name: latex;
+        }
+
+        @keyframes latex {
+            to {
+                width: 70%;
+            }
+        }
+
+        .professional-experience::after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+
+        .achievement-contact {
+            padding: 1% 7%;
+            background-color: #7c757a;
+            color: white;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 1rem;
+            text-align: center;
+            border: none;
+            border-radius: 5px;
+            resize: none;
+        }
+
+        .contact button {
+            border: none;
+            border-radius: 12px;
+            background-color: #0069d9;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px;
+            padding: 15px;
+            width: 100px;
+        }
+
+        button:hover {
+            background-color: orange;
+        }
+
+        .contact-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .media-buttons .btn {
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 32px;
+            margin: 10px;
+            padding: 5px;
+            width: 50px;
+            background-color: white;
+        }
+
+        .btn:hover {
+            background-color: gray;
+        }
+
+        .achievement-contact::after {
+            content: '';
+            clear: both;
+            display: table;
+        }
+
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+
+        }
+
+        .footer-menu a {
+            display: block;
+            font-size: 1rem;
+            margin: 15px 0;
+        }
+
+        .footer-menu a:hover {
+            background-color: purple;
+            color: gray;
+            border-radius: 15%;
+        }
+
+        .footer::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        /* navbar design starts here */
+        .logo {
+            text-align: left;
+        }
+
+        .heading h1 {
+            text-align: right;
+        }
+
+        .menu {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        .menu a {
+            padding: 5px 10px;
+            margin: 20px 5px;
+            /* background-color: transparent; */
+        }
+
+        .profile-description p {
+            color: gray;
+            margin: 0 auto;
+            width: 50%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .professional-experience {
+            padding: 0% 0%;
+        }
+
+        .contact button {
+            width: 150px;
+        }
+
+        .contact-links {
+            text-align: center;
+            position: relative;
+        }
+
+        .media-buttons {
+            position: absolute;
+            margin-top: 200px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .btn {
+            margin: 5px;
+            width: 80px;
+        }
+
+        .achievement {
+            padding-right: 50px;
+        }
+
+        .footer-menu {
+            margin-top: 12px;
+        }
+
+        .footer-menu a {
+            display: inline;
+            font-size: 1rem;
+            margin: 10px;
+            color: white;
+        }
+
+        .developer-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+        }
+
+        .developer-image {
+            max-width: 25%;
+            border-radius: 10%;
+        }
+
+        .header h1 {
+            font-size: 24px;
+            color: white;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .header h2 {
+            font-size: 18px;
+            color: white;
+            margin: 5px 0;
+            padding: 0;
+
+        }
+
+        .header p {
+            font-size: 14px;
+            color: #EEE;
+            margin: 5px 0;
+            padding: 0;
+        }
+
+        .profile h2 {
+            font-size: 30px;
+            color: black;
+            margin: 0 0 10px 0;
+            padding: 0;
+            margin-top: 10px;
+        }
+
+        .profile p {
+            font-size: 18px;
+            color: #333;
+            margin: 0 0 20px 0;
+            padding: 0;
+        }
+
+        .projects {
+            background-color: white !important;
+        }
+
+        .card {
+            background-color: #a39e9e;
+            border-radius: 5px;
+            padding-bottom: 20px;
+            transition: 0.3s;
+            height: 400px;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px 5px black;
+        }
+
+        .image img {
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 15px;
+            height: 300px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #project-title {
+            text-align: center;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        #project-link {
+            text-align: center;
+            color: black;
+        }
+
+        #project-link:hover {
+            background-color: white;
+        }
+
+        .card-title h2 {
+            background-color: #616161;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+        }
+
+        .pl {
+            text-align: center;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .pl a{
+            text-decoration: none;
+        }
+        .pl,
+        a:hover {
+            color: white;
+        }
+        li{
+            margin-left: 20px;
+        }
+        .profile p{
+            margin: 8px;
+        }
+        .profile{
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="border-radius: 5px;" class="navbar">
+
+        <div class="developer-card">
+            <img src="asif.jpg" alt="Developer Image" class="developer-image" />
+        </div>
+        <div class="header">
+            <h1>Asif Bhuiyan</h1>
+            <h2>Web Developer</h2><br>
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="card-title">
+            <h2>ABOUT ME</h2>
+        </div>
+    <div class="profile" id="about-me"><br>
+
+        <p style="text-align: justify;">Hey There, I'm Asif, I'm a passionate Web Developer with a deep love for crafting exceptional digital experiences. Over the years, I've honed my skills and gained valuable experience in both front-end and back-end development. My commitment to continuous learning and staying up-to-date with the latest industry trends ensures that I can deliver cutting-edge solutions to my clients. Whether it's creating responsive and user-friendly interfaces, optimizing server performance, or implementing secure authentication systems, I'm always eager to take on new challenges and push the boundaries of what's possible in the digital realm. I am also an expert in Digital Marketing. I have over 3 years experience in this field both office works and freelance works. </p> <br>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <div class="professional-experience">
+        <div class="work-experience col-4">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="work.png" alt="">
+                </div>
+                <div class="card-title">
+                    <h2>WORK </h2>
+                </div>
+                <div class="card-description">
+                    <ol>
+                        <li>
+                            <strong>Digital Marketing Specialist </strong><br>
+                            01/05/2019–06/02/2022 <br>
+                            SIgnature Mind IT Institute <br>
+                            Kakrail, Dhaka, Bangladesh <br>
+                        </li>
+                        <hr>
+
+                    </ol>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="education col-4">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="book.png" alt="">
+                </div>
+                <div class="card-title">
+                    <h2>EDUCATION</h2>
+                </div>
+                <div class="card-description">
+                    <ol>
+
+                        <li>
+                            <strong>B.Sc. in Computer Science & Engineering</strong> <br>
+                            2020-Still Running</br>
+                            North South University <br>
+                            Basundhara R/A, Dhaka, Bangladesh <br>
+                            <a class="link" href="http://www.northsouth.edu/" target="blank">http://www.northsouth.edu/</a> <br>
+                            Result: Pending <br>
+                        </li>
+                        <hr>
+                        <li>
+                            <strong>Higher Secondary Certificate</strong> <br>
+                            2017-2019 <br>
+                            Birsrestha Munsi Abdur Rouf Public College <br>
+                            Peelkhana, Dhaka, Bangladesh<br>
+                            <a class="link" href="https://www.abdurroufcollege.ac.bd/" target="blank">https://www.abdurroufcollege.ac.bd</a> <br>
+                            Result: 4.50/5.00 <br>
+                        </li>
+
+                        <hr>
+                        <li>
+                            <strong>Secondary School Certificate</strong> <br>
+                            2011-2017 <br>
+                            Nurul Hoq High School <br>
+                            Rupgonj, Narayangonj, Dhaka, Bangladesh<br>
+                            <a class="link" href="https://www.nhhs.com/" target="blank">https://www.nhhs.edu.bd/</a> <br>
+                            Result: 5.00/5.00 <br>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <div class="skills col-4" id="skill">
+            <div class="card">
+                <div class="card-icon">
+                    <img class="rounded-img" src="skill.png" alt="">
+                </div>
+                <div class="card-title">
+                    <h2>SKILLS</h2>
+                </div>
+                <div class="card-description">
+                    <div class="skills-container">
+                        <ul>
+                            <li class="html">HTML</li>
+                            <li class="css">CSS</li>
+                            <li class="bootstrap">Bootstrap</li>
+                            <li class="js">JavaScript</li>
+                            <li class="php">PHP</li>
+                            <li class="python">Python</li>
+                            <li class="sql">SQL</li>
+                            <li class="git">Git & GitHub</li>
+                            <li class="latex">Latex</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="card-title">
+        <h2>PROJECTS</h2>
+    </div>
+    <div class="projects">
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="price-tracker-home.png" alt="image">
+                </div>
+                <br>
+                <div class="card-description">
+                    <div class="pl"><a href="https://github.com/asifbhuiyann/Price-Tracker-for-IT-Products
+">View</a></div>
+                    <h3 id="project-title">Price Tracker For IT Products</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="shobjanta.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/API_Implemented_Search_Engine
+">View</a>
+                    </div>
+                    <h3 id="project-title">ShobJanta A Search Engine</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="foshol.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Fosol-A-Blockchain-Based-Marketplace
+">View</a>
+                    </div>
+                    <h3 id="project-title">Fosol A BlockChain Based Marketplace</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="terminal.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Linux-Terminal-Using-Command-System-CSE-323_Operating-System
+">View</a>
+                    </div>
+                    <h3 id="project-title">Linux Terminal Using Command System</h3>
+                </div>
+            </div><br>
+        </div>
+
+                <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="brick.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/DX-BALL-GAME-CSE-215
+">View</a>
+                    </div>
+                    <h3 id="project-title">DX Ball Game</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="doorlock.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Password-Based-Door-Lock-System-Using-8086-Microprocessor
+">View</a>
+                    </div>
+                    <h3 id="project-title">Password Based Door Lock Using Microprocessor</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="flight.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Online-Flight-Booking-System-CSE-311-Database-Management
+">View</a>
+                    </div>
+                    <h3 id="project-title">Online Flight Booking System</h3>
+                </div>
+            </div><br>
+        </div>
+
+                <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="gptbot.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Chatbot-Using-GPT
+">View</a>
+                    </div>
+                    <h3 id="project-title">Chatbot Using ChatGPT</h3>
+                </div>
+            </div><br>
+        </div>
+
+                <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="nsufac.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Nsu-Faculty-Details-Bot
+">View</a>
+                    </div>
+                    <h3 id="project-title">NSU Faculty Details Bot</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="Sentiment.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Sentiment-Analysis-On-Women-s-Clothing-Reviews
+">View</a>
+                    </div>
+                    <h3 id="project-title">Sentiment Analysis On Clothing Reviews</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="launch.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Coming-Soon-Interactive-Timer-Page
+">View</a>
+                    </div>
+                    <h3 id="project-title">Interractive Launching Page</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="stopwatch.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Stopwatch
+">View</a>
+                    </div>
+                    <h3 id="project-title">Online Stopwatch</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="password-generator.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Random-Password-Generator
+">View</a>
+                    </div>
+                    <h3 id="project-title">Random Password Generator</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="t2s.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Text-To-Speech-Converter
+">View</a>
+                    </div>
+                    <h3 id="project-title">Text To Speech Converter</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="qr.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/QR-Code-Generator
+">View</a>
+                    </div>
+                    <h3 id="project-title">QR Code Generator</h3>
+                </div>
+            </div><br>
+        </div>
+
+        <div class="project-work col-3">
+            <div class="card">
+                <div class="image">
+                    <img src="popup.png" alt="image">
+                </div><br>
+                <div class="card-description">
+                    <div class="pl">
+                        <a href="https://github.com/asifbhuiyann/Pop-Up-Window
+">View</a>
+                    </div>
+                    <h3 id="project-title">Pop Up Window</h3>
+                </div>
+            </div><br>
+        </div>
+
+
+
+    </div>  
+<hr>
+<br>
+    <div style="border-radius: 5px;" class="achievement-contact">
+        <div class="achievement col-4">
+            <h2 style="text-align: center;">ACHIEVEMENTS</h2>
+            <hr class="dotted-hr">
+            <p>1. Stood First Position in P.S.C , J.S.C and S.S.C in Rupgonj Thana.</p>
+            <p>2. Got Scolarship in P.S.C , J.S.C and S.S.C Examination.</p>
+            <p>3. I am an active member of IEEE NSU Student Platform.</p>
+            <p>4. I was a member of Science Club of Rouf College.</p>
+            <p>5. I got 25% Merit Waiver Based On Academic Performance at NSU.</p>
+            <p>6. I have got 5 scholarships in my Secondary level.</p>
+
+        </div>
+
+        <div class="contact col-4" id="contact-me">
+            <h2>CONTACT ME</h2>
+            <hr class="dotted-hr">
+            <form action="index.php" method="post">
+                <p><input type="text" placeholder="Your Name" name="naam" required></p>
+                <p><input type="email" placeholder="Your Email" name="email" required></p>
+                <textarea placeholder="Your Message" name="details" cols="30" rows="10" required></textarea>
+                <button id="action" type="submit" name="save">SEND</button>
+                <button id="action" type="reset">RESET</button>
+            </form>
+        </div>
+
+        <div class="contact-links col-4" id="contact">
+            <h2>More Ways to Contact</h2>
+            <hr class="dotted-hr">
+
+            <div class="media-buttons">
+
+                <button class="btn" onclick="window.open('https://www.facebook.com/aasifbhuiyan/')" class="btn request-callback"><i class="fa fa-facebook" style="color:  #3b5998;" aria-hidden="true"></i></button>
+                <button class="btn" onclick="window.open('https://sites.google.com/view/asifbhuiyan')" class="btn request-callback"> <span style="font-size: 1.7rem;">&#127760;</span> </i></button>
+                <button class="btn" onclick="window.open(' https://github.com/asifbhuiyann')" class="btn request-callback"><i class="fa fa-github" aria-hidden="true" style="color: #000000;"></i></button>
+            </div>
+
+        </div>
+    </div>
+        <hr>
+    <div style="border-radius: 5px;" class="footer">
+        <div class="footer-desc col-12">
+            &copy; 2024 Asif Bhuiyan. All Rights Reserved.
+        </div>
+    </div>
+    <!-- <script>
+        var message = "<?php echo $message; ?>";
+        if (message) {
+            alert(message);
+        }
+
+        function resetForm() {
+            document.getElementById("contactForm").reset();
+        }
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
