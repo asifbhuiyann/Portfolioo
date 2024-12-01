@@ -479,7 +479,11 @@ button:hover {
     margin: 10px;
     color: white;
 }
-
+@media (max-width: 768px) {
+    a.link {
+        font-size: 0.8rem; 
+    }
+}
 .developer-card {
     text-align: center;
     padding: 20px;
