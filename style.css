@@ -524,6 +524,14 @@ button:hover {
     margin: 5px 0;
     padding: 0;
 }
+.header h3 img{
+    width: 40px;
+    text-align: center;
+    transition: width 0.3s ease-in-out;
+}
+.header h3 img:hover {
+    width: 45px; 
+}
 
 .header p {
     font-size: 14px;
