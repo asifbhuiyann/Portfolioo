@@ -505,6 +505,7 @@ textarea {
 .developer-image {
     max-width: 25%;
     border-radius: 10%;
+    width: 300px;
 }
 @media (max-width: 768px) {
     h2 {
